@@ -6,7 +6,7 @@
     <title>Inscription</title>
 </head>
 <body>
-
+<h1>salut je teste un formulaire ici</h1>
 <form action="traitement.php" method="post">
     <label for="nom">Nom :</label>
     <input type="text" id="nom" name="nom" required>
