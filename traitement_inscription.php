@@ -25,8 +25,15 @@ if (isset($_POST['btn-insc'])) {
     $email = $_POST['email'];
     $mdp = $_POST['mdp'];
 
-    // Vous devez utiliser ces variables pour insérer les données dans votre base de données
-    // Par exemple, vous pourriez utiliser une requête préparée pour améliorer la sécurité
-    // Exemple : $bdd->query("INSERT INTO votre_table (nom, prenom, pseudo, email, mdp) VALUES ('$nom', '$prenom', '$pseudo', '$email', '$mdp')");
+    $requete = $bdd->prepare("INSERT INTO users VALUES (0, :nom, :prenom, :pseudo, :email, :mdp)");
+    $requete->execute(
+        "nom" => $nom,
+        "prenom" => $prenom,
+        "pseudo" => $pseudo,
+        "email" => $email,
+        "mdp" => $mdp,
+        )
+    );
+    echo "Insciption reussie !"
 }
 ?>
