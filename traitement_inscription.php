@@ -1,7 +1,7 @@
 <?php
 $servername = "127.0.0.1:3306";
 $username = "u559440517_wissali";
-$password = "Wissem1997";
+$password = "";
 
 try {
     // Création d'une nouvelle instance de la classe PDO pour la connexion à la base de données
