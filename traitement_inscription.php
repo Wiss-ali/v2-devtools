@@ -23,7 +23,7 @@ if (isset($_POST['btn-insc'])) {
     $prenom = $_POST['prenom'];
     $pseudo = $_POST['pseudo'];
     $email = $_POST['email'];
-    $mdp = $_POST['mdp'];
+    $mdp = password_hash($_POST['mdp'], PASSWORD_DEFAULT); // Hachage du mot de passe
 
     $requete = $bdd->prepare("INSERT INTO users VALUES (0, :nom, :prenom, :pseudo, :email, :mdp)");
     $requete->execute(
