@@ -6,7 +6,7 @@
     <title>Inscription</title>
 </head>
 <body>
-<form action="traitement.php" method="post">
+<form action="traitement_inscription.php" method="POST">
     <label for="nom">Nom :</label>
     <input type="text" id="nom" name="nom" required>
     <br>
