@@ -25,8 +25,7 @@ if (isset($_POST['btn-insc'])) {
     $email = $_POST['email'];
     $mdp = password_hash($_POST['mdp'], PASSWORD_DEFAULT); // Hachage du mot de passe
 
-
-    );
+   
     echo "Insciption reussie !"
 }
 ?>
