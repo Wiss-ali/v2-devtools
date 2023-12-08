@@ -27,11 +27,12 @@ if (isset($_POST['btn-insc'])) {
 
     $requete = $bdd->prepare("INSERT INTO users VALUES (0, :nom, :prenom, :pseudo, :email, :mdp)");
     $requete->execute(
-        "nom" => $nom,
-        "prenom" => $prenom,
-        "pseudo" => $pseudo,
-        "email" => $email,
-        "mdp" => $mdp,
+        array( 
+            "nom" => $nom,
+            "prenom" => $prenom,
+            "pseudo" => $pseudo,
+            "email" => $email,
+            "mdp" => $mdp
         )
     );
     echo "Insciption reussie !"
