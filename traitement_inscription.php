@@ -11,7 +11,7 @@ try {
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Message indiquant que la connexion a réussi
-    // echo "Connexion réussie";
+    echo "Connexion réussie";
 } catch (PDOException $e) {
     // En cas d'erreur, affichage du message d'erreur
     echo "Erreur : " . $e->getMessage();
@@ -25,15 +25,7 @@ if (isset($_POST['btn-insc'])) {
     $email = $_POST['email'];
     $mdp = password_hash($_POST['mdp'], PASSWORD_DEFAULT); // Hachage du mot de passe
 
-    $requete = $bdd->prepare("INSERT INTO users VALUES (0, :nom, :prenom, :pseudo, :email, :mdp)");
-    $requete->execute(
-        array( 
-            "nom" => $nom,
-            "prenom" => $prenom,
-            "pseudo" => $pseudo,
-            "email" => $email,
-            "mdp" => $mdp
-        )
+
     );
     echo "Insciption reussie !"
 }
