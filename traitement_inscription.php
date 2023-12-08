@@ -35,6 +35,6 @@ if (isset($_POST['btn-insc'])) {
             "mdp" => $mdp
         )
     );
-    echo "Insciption reussie !"
+    echo "Insciption reussie !";
 }
 ?>
