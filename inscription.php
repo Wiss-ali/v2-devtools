@@ -24,7 +24,7 @@
     <label for="mdp">Mot de passe :</label>
     <input type="password" id="mdp" name="mdp" required>
     <br>
-    <button type="submit" name="btn-insc">S'inscrire</button>
+    <input type="submit" name="btn-insc">S'inscrire</button>
 </form>
 
 </body>
