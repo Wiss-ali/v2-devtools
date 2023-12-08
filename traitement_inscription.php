@@ -17,15 +17,5 @@ try {
     echo "Erreur : " . $e->getMessage();
 }
 
-if (isset($_POST['btn-insc'])) {
-    // Récupération des valeurs du formulaire
-    $nom = $_POST['nom'];
-    $prenom = $_POST['prenom'];
-    $pseudo = $_POST['pseudo'];
-    $email = $_POST['email'];
-    $mdp = password_hash($_POST['mdp'], PASSWORD_DEFAULT); // Hachage du mot de passe
 
-   
-    echo "Insciption reussie !"
-}
 ?>
