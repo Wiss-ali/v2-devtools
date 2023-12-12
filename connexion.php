@@ -7,7 +7,8 @@
 </head>
 <body>
     
-<form action="traitement_connexion.php" method="post">
+<form action="traitement_connexion.php" method="POST">
+
     <label for="pseudo">Pseudo :</label>
     <input type="text" id="pseudo" name="pseudo" required>
 
@@ -15,6 +16,7 @@
     <input type="password" id="mdp" name="mdp" required>
 
     <input type="submit" name="btn-conn" value="Se Connecter">
+    
 </form>
     
 </body>
