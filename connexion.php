@@ -37,7 +37,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $req = $bdd->query("SELECT * FROM users WHERE pseudo= '$pseudo' AND mdp= '$mdp'");
         $rep = $req->fetch();
 
-        if($rep['id'] != false){
+        if($rep['mdp'] != false){
             echo "vous etes connecté !";
         }
         else
