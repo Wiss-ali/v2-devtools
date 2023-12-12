@@ -18,15 +18,21 @@ try {
 }
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
+
     $pseudo = $_POST['pseudo'];
     $mdp = $_POST['mdp'];
+
     if($pseudo != "" && $mdp != ""){
+
         //connexion a la bdd
-        $req = $bdd->query("SELECT * FROM users WHERE pseudo= '$pseudo' AND mdp = '$mdp'");
+        $req = $bdd->query("SELECT * FROM users WHERE pseudo= '$pseudo' AND mdp= '$mdp'");
         $rep = $req->fetch();
+
         if($rep['id'] != false){
             echo "vous etes connecté !";
-        }else{
+        }
+        else
+        {
             $error_msg = "pseudo ou mdp incorrect !";
         }
     }
