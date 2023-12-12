@@ -14,7 +14,7 @@
     <label for="mdp">Mot de passe :</label>
     <input type="password" id="mdp" name="mdp" required>
 
-    <imput type="submit" name="btn-conn">
+    <input type="submit" name="btn-conn" value="Se Connecter">
 </form>
     
 </body>
