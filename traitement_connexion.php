@@ -11,7 +11,7 @@ try {
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Message indiquant que la connexion a réussi
-    echo "Connexion réussie";
+    // echo "Connexion réussie";
 } catch (PDOException $e) {
     // En cas d'erreur, affichage du message d'erreur
     echo "Erreur : " . $e->getMessage();
@@ -20,7 +20,7 @@ try {
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $pseudo = $_POST['pseudo'];
     $mdp = $_POST['mdp'];
-    if($email != "" && $mdp != ""){
+    if($pseudo != "" && $mdp != ""){
         //connexion a la bdd
         $req = $bdd->query("SELECT * FROM users WHERE pseudo= '$pseudo' AND mdp = '$mdp'");
         $rep = $req->fetch();
