@@ -1,20 +1,20 @@
 <?php
-
-// Informations de connexion à la base de données
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "utilisateurs";
+$servername = "127.0.0.1:3306";
+$username = "u559440517_wissali";
+$password = "Unmdpbien69";
 
 try {
-    // Connexion à la base de données avec PDO
-    $bdd = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
+    // Création d'une nouvelle instance de la classe PDO pour la connexion à la base de données
+    $bdd = new PDO("mysql:host=$servername;dbname=u559440517_utilisateurs", $username, $password);
+
+    // Configuration pour afficher les erreurs PDO
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    // Affichage d'un message de réussite en cas de connexion réussie
-    //echo "Connexion réussie";//
+
+    // Message indiquant que la connexion a réussi
+    // echo "Connexion réussie";
 } catch (PDOException $e) {
-    // En cas d'échec de la connexion, affichage d'un message d'erreur
-    echo "La connexion a échoué : " . $e->getMessage();
+    // En cas d'erreur, affichage du message d'erreur
+    echo "Erreur : " . $e->getMessage();
 }
 
 // Vérification de l'existence des cookies
